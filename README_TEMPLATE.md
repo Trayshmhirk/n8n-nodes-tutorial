@@ -1,18 +1,16 @@
-# n8n-nodes-_node-name_
+# n8n-nodes-chargekeep
 
-This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
+This is an n8n community node. It lets you use ChargeKeep in your n8n workflows.
 
-_App/service name_ is _one or two sentences describing the service this node integrates with_.
+ChargeKeep is a simple recurring and one-time payments platform that helps you accept payments via Stripe or PayPal without writing code..
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
 [Installation](#installation)  
 [Operations](#operations)  
-[Credentials](#credentials)  <!-- delete if no auth needed -->  
+[Credentials](#credentials)  
 [Compatibility](#compatibility)  
-[Usage](#usage)  <!-- delete if not using this section -->  
-[Resources](#resources)  
-[Version history](#version-history)  <!-- delete if not using this section -->  
+[Resources](#resources)
 
 ## Installation
 
@@ -20,29 +18,42 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Operations
 
-_List the operations supported by your node._
+This node supports the following operations:
+
+### Trigger
+
+- Lead Created: Initiates a workflow when a new lead is created in ChargeKeep.
+- Payment Created: Initiates a workflow when a new payment is created.
+- Subscription Created or Updated: Initiates a workflow when a subscription is created or updated.
+
+### Actions
+
+- Add a contact
+- Get a contact details
+- Update a contact
+- Create an invoice
+- Create a product
+- Add a subscription
 
 ## Credentials
 
-_If users need to authenticate with the app/service, provide details here. You should include prerequisites (such as signing up with the service), available authentication methods, and how to set them up._
+To use this node, you need to set up ChargeKeep API credentials:
+
+1. Visit the following website: [CRM ChargeKeep](https://crm.chargekeep.com/) or the beta website: [Beta ChargeKeep](https://beta.chargekeep.com/). Sign up or Log in to you account.
+
+2. Navigate to API tab to obtain your API key.
+
+3. In n8n:
+
+   - Go to Credentials.
+   - Click on New Credential and select the ChargeKeep API base environment url.
+   - Enter your API key and save.
 
 ## Compatibility
 
-_State the minimum n8n version, as well as which versions you test against. You can also include any known version incompatibility issues._
-
-## Usage
-
-_This is an optional section. Use it to help users with any difficult or confusing aspects of the node._
-
-_By the time users are looking for community nodes, they probably already know n8n basics. But if you expect new users, you can link to the [Try it out](https://docs.n8n.io/try-it-out/) documentation to help them get started._
+Minimum n8n Version: 1.0.0
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
-* _Link to app/service documentation._
-
-## Version history
-
-_This is another optional section. If your node has multiple versions, include a short description of available versions and what changed, as well as any compatibility impact._
-
-
+- [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
+- [ChargeKeep Api Documentation](https://beta.chargekeep.com/api/index.html)
